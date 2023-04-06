@@ -1,0 +1,60 @@
+
+Question: what are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+Ans-I will include secure protocol i.e,HTTPS while creating or conjsuming an API.
+
+
+
+
+
+Theoretical Challenge
+
+ 
+Suppose you have a CSV file with the data below.
+ 
+A1: 5, A2: 7, A3: 9, B1: 3, B2: 8, B3: =4+5, C1: =5+A1, C2: =A2+B2, C3: =C2+B3
+ 
+This can be represented in an excel sheet:
+
+
+
+I want a program that will take the CSV input above and produce CSV output with the results.
+
+If it is a value, then return a value.  If it is a formula then calculate the formula and return the value of that formula.
+
+
+1.How will you tackle the challenge above?
+
+Ans-To tackle the challenge first of all i will write this programm which reads the CSV file completly line wise and then will
+
+    split each line into cells after evaluating each cell.if cell contains a value then programm will also return value.if cell 
+
+    contains a formula then programm will calculate the formula but for calculating the formula programm have to parse the formula
+
+    string and will resolve cell references or mathematical operators in the formula if the formula get resolved then programm 
+ 
+    executes the formula and return the value of that formula.
+
+
+
+
+2.What type of errors you would you check for?
+
+Ans-I will check for many types of errors like syntactical errors,Division by zero error-which occurs when a formula dividing any 
+
+    number with zero,DataType error-which occurs when we are writing other dattype and the value is different then this error occurs
+ 
+    this are the type of errors i will check for.
+
+
+
+
+3.How might a user break your code?
+
+Ans-If someone makes mistakes when entering information into the CSV file, it can cause problems for the program that uses the file.
+
+    These mistakes can include spelling errors, incorrect formulas, or using numbers that are too big for the program to handle. 
+
+    To avoid these issues, the program should be designed to catch and fix any errors that might come up, so it doesn't break 
+
+    or give out incorrect output.
